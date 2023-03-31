@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+        div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(1.2rem + 1vw);
+        }
+        .first-text{
+            padding-right: 0.5rem;
+            position: relative;
+            color: white;
+        }
+        .first-text::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: "STUDY NOW";
+            background: -webkit-linear-gradient(#d00606, #aa0d9a);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: animate2 3s linear infinite;
+        }
+        .second-text{
+            position: relative;
+            color: white;
+        }
+        .second-text::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: "PAY LATER";
+            background: -webkit-linear-gradient(#0689d0, #0daa15);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: animate 3s linear infinite;
+        }
+
+        @keyframes animate {
+            0%,10%,20%{
+                opacity: 1;
+            }
+            30%,40%,50%,60%,70%,80%,90%,100%{
+                opacity: 0;
+            }
+
+        }
+        @keyframes animate2 {
+            10%{
+                opacity: 0;
+            }
+            20%,30%,40%,50%,60%,70%,80%,90%,100%{
+                opacity: 1;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="first-text">STUDY NOW</p>
+        <p class="second-text">PAY LATER</p>
+    </div>
+</body>
+</html>
